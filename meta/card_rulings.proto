@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package meta;
 
+option go_package = "github.com/stevezaluk/mtgjson-models/meta";
+
 message CardRulings {
     string date = 1;
     string text = 2;

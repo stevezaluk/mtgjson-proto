@@ -4,6 +4,8 @@ package meta;
 
 import "mtgjson-proto/meta/identifiers.proto";
 
+option go_package = "github.com/stevezaluk/mtgjson-models/meta";
+
 message ForeignData {
     string faceName = 1;
     string flavorText = 2;  
