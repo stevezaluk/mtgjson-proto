@@ -1,3 +1,29 @@
 syntax = "proto3";
 
 package meta;
+
+message CardLegalities {
+    string alchemy = 1;
+    string brawl = 2;
+    string commander = 3;
+    string duel = 4;
+    string explorer = 5;
+    string future = 6;
+    string gladiator = 7;
+    string historic = 8;
+    string historicBrawl = 9;
+    string legacy = 10;
+    string modern = 11;
+    string oathbreaker = 12;
+    string oldschool = 13;
+    string pauper = 14;
+    string paupercommander = 15;
+    string penny = 16;
+    string pioneer = 17;
+    string predh = 18;
+    string premodern = 19;
+    string standard = 20;
+    string standardbrawl = 21;
+    string timeless = 22;
+    string vintage = 23;
+}
