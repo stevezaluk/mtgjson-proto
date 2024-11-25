@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+package card;
+
+import "mtgjson-proto/meta/identifiers.proto";
+import "mtgjson-proto/meta/legalities.proto";
+import "mtgjson-proto/meta/related_cards.proto";
+import "mtgjson-proto/meta/purchase_urls.proto";
+import "mtgjson-proto/meta/card_rulings.proto";
+import "mtgjson-proto/meta/leadership.proto";
+import "mtgjson-proto/meta/source_products.proto";
+import "mtgjson-proto/meta/foreign_data.proto";
+
+option go_package = "github.com/stevezaluk/mtgjson-models/card";
+
+/*
+CardSet - Represents a card within a Magic: The Gathering set
+See here for more info: https://mtgjson.com/data-models/card/card-set/
+*/
+message CardSet {
+    string asciiName = 1;
+
+    repeated string attractionLights = 2;
+    repeated string colorIdentity = 3;
+    repeated string colorIndicator = 4;
+    repeated string colors = 5;
+
+    int64 convertedManaCost = 6;
+    string defense = 7;
+    int64 edhrecRank = 8;
+    float edhrecSaltiness = 9;
+    int64 faceConvertedManaCost = 10;
+    int64 faceManaValue = 11;
+    string faceName = 12;
+    string firstPrinting = 13;
+
+    meta.ForeignData foreignData = 14;
+    string hand = 15;
+    bool hasAlternativeDeckLimit = 16;
+    meta.CardIdentifiers identifiers = 17;
+    bool isFunny = 18;
+    bool isReserved = 19;
+    repeated string keywords = 20;
+    string layout = 21;
+    meta.LeadershipSkills leadershipSkills = 22;
+    meta.CardLegalities legalities = 23;
+    string life = 24;
+    string loyalty = 25;
+    string manaCost = 26;
+    int64 manaValue = 27;
+    string name = 28;
+    string power = 29;
+    repeated string printings = 30;
+    meta.PurchaseUrls purchaseUrls = 31;
+    meta.RelatedCards relatedCards = 32;
+    repeated meta.CardRulings rulings = 33;
+    string side = 34;
+
+    repeated string subsets = 35;
+    repeated string subtypes = 36;
+    repeated string supertypes = 37;
+    string text = 38;
+    string toughness = 39;
+    string type = 40;
+    repeated string types = 41;
+
+    string artist = 42;
+    repeated string artistIds = 43;
+
+    repeated string availability = 44;
+    repeated string boosterTypes = 45;
+    strinb borderColor = 46;
+    repeated string cardParts = 47;
+    string duelDeck = 48;
+    string faceFlavorName = 49;
+    repeated string finishes = 50;
+    string flavorName = 51;
+    repeated string frameEffects = 52;
+    bool hasContentWarning = 53;
+    bool hasFoil = 54;
+    bool hasNonFoil = 55;
+    bool isAlternative = 56;
+    bool isFullArt = 57;
+    bool isOnlineOnly = 58;
+    bool isOversized = 59;
+    bool isPromo = 60;
+    bool isRebalanced = 61;
+    bool isReprint = 62;
+    bool isStarter = 63;
+    bool isStorySpotlight = 64;
+    bool isTextless = 65;
+    bool isTimeshifted = 66;
+    string language = 67;
+    string number = 68;
+    repeated string originalPrintings = 69;
+    string originalReleaseDate = 70;
+    string originalText = 71;
+    string originalType = 72;
+    repeated string otherFaceIds = 73;
+    repeated string promoTypes = 74;
+    string rarity = 75;
+    repeated string rebalancedPrintings = 76;
+    string securityStamp = 77;
+    string setCode = 78;
+    string signature = 79;
+    meta.SourceProducts sourceProducts = 80;
+    string uuid = 81;
+    repeated string variations = 82;
+    repeated string watermakr = 83;
+}
