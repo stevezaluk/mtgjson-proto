@@ -2,14 +2,14 @@ syntax = "proto3";
 
 package card;
 
-import "mtgjson-proto/meta/identifiers.proto";
-import "mtgjson-proto/meta/legalities.proto";
-import "mtgjson-proto/meta/related_cards.proto";
-import "mtgjson-proto/meta/purchase_urls.proto";
-import "mtgjson-proto/meta/card_rulings.proto";
-import "mtgjson-proto/meta/leadership.proto";
-import "mtgjson-proto/meta/source_products.proto";
-import "mtgjson-proto/meta/foreign_data.proto";
+import "meta/identifiers.proto";
+import "meta/legalities.proto";
+import "meta/related_cards.proto";
+import "meta/purchase_urls.proto";
+import "meta/card_rulings.proto";
+import "meta/leadership.proto";
+import "meta/source_products.proto";
+import "meta/foreign_data.proto";
 
 option go_package = "github.com/stevezaluk/mtgjson-models/card";
 
@@ -69,7 +69,7 @@ message CardSet {
 
     repeated string availability = 44;
     repeated string boosterTypes = 45;
-    strinb borderColor = 46;
+    string borderColor = 46;
     repeated string cardParts = 47;
     string duelDeck = 48;
     string faceFlavorName = 49;

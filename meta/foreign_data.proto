@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package meta;
 
-import "mtgjson-proto/meta/identifiers.proto";
+import "meta/identifiers.proto";
 
 option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
