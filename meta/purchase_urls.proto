@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package meta;
+
+message PurchaseUrls {
+    string cardKingdom = 1;
+    string cardKingdomEtched = 2;
+    string cardKingdomFoil = 3;
+    string cardmarket = 4;
+    string tcgplayer = 5;
+    string tcgplayerEtched = 6;
+}
