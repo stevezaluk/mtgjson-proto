@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package meta;
+
+message SourceProducts {
+    repeated string etched = 1;
+    repeated string foil = 2;
+    repeated string nonFoil = 3;
+}
