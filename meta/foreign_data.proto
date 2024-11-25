@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package meta;
+
+import "mtgjson-proto/meta/identifiers.proto";
+
+message ForeignData {
+    string faceName = 1;
+    string flavorText = 2;  
+    meta.CardIdentifiers identifiers = 3;
+    string language = 4;
+    string name = 5;
+    string text = 6;
+    string type = 7;
+}
