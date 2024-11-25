@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package meta;
+
+option go_package = "./mtgjson-models/meta";
+
+message CardIdentifiers { 
+    string cardKingdomEtchedId = 1;
+    string cardKingdomFoilId = 2;
+    string cardKingdomId = 3;
+    string cardSphereId = 4;
+    string cardSphereFoilId = 5;
+    string cardTraderId = 6;
+    string csiId = 7;
+    string mcmId = 8;
+    string mcmMetaId = 9;
+    string miniatureMarketId = 10;
+    string mtgArenaId = 11;
+    string mtgjsonFoilVersionId = 12;
+    string mtgjsonNonFoilVersionId = 13;
+    string mtgjsonV4Id = 14;
+    string mtgoFoilId = 15;
+    string mtgoId = 16;
+    string multiverseId = 17;
+    string scgId = 18;
+    string scryfallId = 19;
+    string scryfallCardBackId = 20;
+    string scryfallOracleId = 21;
+    string scryfallIllustrationId = 22;
+    string tcgplayerProductId = 23;
+    string tcgplayerEtchedProductId = 24;
+}
