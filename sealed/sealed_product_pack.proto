@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package sealed;
+
+option go_package = "./mtgjson-models/sealed";
+
+message SealedProductPack {
+    string code = 1;
+    string set = 2;
+}
