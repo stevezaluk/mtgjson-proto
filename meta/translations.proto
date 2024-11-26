@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package meta;
+
+option go_package = "./mtgjson-models/meta";
+
+message Translations {
+    string ancientGreek = 1 [json_name="Ancient Greek"];
+    string arabic = 2 [json_name="Arabic"];
+    string chineseSimplified = 3 [json_name="Chinese Simplified"];
+    string chineseTraditional = 4 [json_name="Chinese Traditional"];
+    string french = 5 [json_name="French"];
+    string german = 6 [json_name="German"];
+    string hebrew = 7 [json_name="Hebrew"];
+    string italian = 8 [json_name="Italian"];
+    string japanese = 9 [json_name="Japanese"];
+    string korean = 10 [json_name="Korean"];
+    string latin = 11 [json_name="Latin"];
+    string phyrexian = 12 [json_name="Phyrexian"];
+    string portugeseBrazil = 13 [json_name="Portugese (Brazil)"];
+    string russian = 14 [json_name="Russian"];
+    string sanskrit = 15 [json_name="Sanskrit"];
+    string spanish = 16 [json_name="Spanish"];
+}
