@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package user;
 
+option go_package = "./mtgjson-models/user";
+
 /*
 User - Represents an MTGJSON API user. The fields: decks, cards, and sets are a list of
 MTGJSON V4 UUID's that represent the objects that they own
