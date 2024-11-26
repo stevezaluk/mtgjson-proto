@@ -4,6 +4,8 @@ package deck;
 
 import "card/card_set.proto";
 
+option go_package = "./mtgjson-models/deck";
+
 /*
 Deck - Represents an MTGJSON deck
 
