@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package set;
+
+import "booster/booster_config.proto";
+import "sealed/sealed_product.proto";
+import "meta/translations.proto";
+
+option go_package = "./mtgjson-models/set";
+
+message Set {
+    int64 baseSetSize = 1;
+    string block = 2;
+    map<string, booster.BoosterConfig> booster = 3;
+    repeated string cards = 4;
+    int64 cardsphereId = 5;
+    string code = 6;
+    string codeV3 = 7;
+    repeated string decks = 8;
+    bool isForeignOnly = 9;
+    bool isFoilOnly = 10;
+    bool isNonFoilOnly = 11;
+    bool isOnlineOnly = 12;
+    bool isPaperOnly = 13;
+    bool isPartialPreview = 14;
+    string keyruneCode = 15;
+    repeated string languages = 16;
+    int64 mcmId = 17;
+    int64 mcmIdExtras = 18;
+    string mcmName = 19;
+    string mtgoCode = 20;
+    string name = 21;
+    string parentCode = 22;
+    string releaseDate = 23;
+    repeated sealed.SealedProduct sealedProduct = 24;
+    int64 tcgPlayerGroupId = 25;
+    repeated string tokens = 26;
+    string tokenSetCode = 27;
+    int64 tokenSetSize = 28;
+    meta.Translations translations = 29;
+    string type = 30;
+}
