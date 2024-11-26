@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package sealed;
+
+import "sealed/sealed_product_card.proto";
+import "sealed/sealed_product_deck.proto";
+import "sealed/sealed_product_other.proto";
+import "sealed/sealed_product_pack.proto";
+import "sealed/sealed_product_sealed.proto";
+
+
+option go_package = "./mtgjson-models/sealed";
+
+message SealedProductContents {
+    sealed.SealedProductCard card = 1;
+    sealed.SealedProductDeck deck = 2;
+    sealed.SealedProductOther other = 3;
+    sealed.SealedProductPack pack = 4;
+    sealed.SealedProductSealed sealed = 5;
+    map<string, SealedProductContents> variable = 6;
+}

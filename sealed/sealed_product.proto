@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package sealed;
+
+import "sealed/sealed_product_content.proto";
+import "meta/identifiers.proto";
+import "meta/purchase_urls.proto";
+
+option go_package = "./mtgjson-models/sealed";
+
+message SealedProduct {
+    int64 cardCount = 1;
+    string category = 2;
+    sealed.SealedProductContents contents = 3;
+    meta.CardIdentifiers identifiers = 4;
+    string name = 5;
+    int64 productSize = 6;
+    meta.PurchaseUrls purchaseUrls = 7;
+    string releaseDate = 8;
+    string subtype = 9;
+    string uuid = 10;
+}

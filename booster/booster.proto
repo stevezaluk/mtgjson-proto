@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package booster;
+
+option go_package = "./mtgjson-models/booster";
+
+message BoosterPack {
+    map<string,  int> contents = 1;
+    int64 weight = 2;
+}

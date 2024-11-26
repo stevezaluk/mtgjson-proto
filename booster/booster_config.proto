@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package booster;
+
+import "booster/booster.proto";
+
+option go_package = "./mtgjson-models/booster";
+
+message BoosterConfig {
+    repeated booster.BoosterPack boosters = 1;
+    int64 boostersTotalWeight = 2;
+    string name = 3;
+    map<string, booster.BoosterSheet> sheets = 4;
+}
