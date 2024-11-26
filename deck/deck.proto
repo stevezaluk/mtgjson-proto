@@ -22,12 +22,18 @@ message Deck {
     DeckContents contents = 6;
 }
 
+/*
+DeckContentIds - Represents the MTGJSON v4 ID's that make up a deck
+*/
 message DeckContentIds {
     repeated string mainBoard = 1;
     repeated string sideBoard = 2;
     repeated string commander = 3;
 }
 
+/* 
+DeckContents - Represents the MTGJSON Cards of the decks and its boards
+*/
 message DeckContents {
     repeated card.CardSet mainBoard = 1;
     repeated card.CardSet sideBoard = 2;
