@@ -3,6 +3,7 @@ syntax = "proto3";
 package deck;
 
 import "card/card_set.proto";
+import "meta/mtgjson_api.proto";
 
 option go_package = "./mtgjson-models/deck";
 
@@ -22,6 +23,7 @@ message Deck {
     string releaseDate = 4;
     DeckContentIds contentIds = 5;
     DeckContents contents = 6;
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 7;
 }
 
 /*
