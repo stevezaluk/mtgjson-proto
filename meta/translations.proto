@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package meta;
 
-option go_package = "./mtgjson-models/meta";
+option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
 message Translations {
     string ancientGreek = 1 [json_name="Ancient Greek"];

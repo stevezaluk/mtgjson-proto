@@ -12,7 +12,7 @@ import "meta/source_products.proto";
 import "meta/foreign_data.proto";
 import "meta/mtgjson_api.proto";
 
-option go_package = "./mtgjson-models/card";
+option go_package = "github.com/stevezaluk/mtgjson-models/card";
 
 /*
 CardSet - Represents a card within a Magic: The Gathering set

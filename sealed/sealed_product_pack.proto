@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package sealed;
 
-option go_package = "./mtgjson-models/sealed";
+option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProductPack {
     string code = 1;

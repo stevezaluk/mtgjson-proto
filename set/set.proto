@@ -7,7 +7,7 @@ import "sealed/sealed_product.proto";
 import "meta/translations.proto";
 import "meta/mtgjson_api.proto";
 
-option go_package = "./mtgjson-models/set";
+option go_package = "github.com/stevezaluk/mtgjson-models/set";
 
 message Set {
     int64 baseSetSize = 1;

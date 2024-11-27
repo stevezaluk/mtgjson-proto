@@ -6,7 +6,7 @@ import "sealed/sealed_product_contents.proto";
 import "meta/identifiers.proto";
 import "meta/purchase_urls.proto";
 
-option go_package = "./mtgjson-models/sealed";
+option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProduct {
     int64 cardCount = 1;

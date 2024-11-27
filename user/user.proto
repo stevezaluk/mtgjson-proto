@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 
-option go_package = "./mtgjson-models/user";
+option go_package = "github.com/stevezaluk/mtgjson-models/user";
 
 /*
 User - Represents an MTGJSON API user. The fields: decks, cards, and sets are a list of

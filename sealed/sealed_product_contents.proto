@@ -9,7 +9,7 @@ import "sealed/sealed_product_pack.proto";
 import "sealed/sealed_product_sealed.proto";
 
 
-option go_package = "./mtgjson-models/sealed";
+option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProductContents {
     sealed.SealedProductCard card = 1;

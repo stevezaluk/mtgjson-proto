@@ -5,7 +5,7 @@ package booster;
 import "booster/booster.proto";
 import "booster/booster_sheet.proto";
 
-option go_package = "./mtgjson-models/booster";
+option go_package = "github.com/stevezaluk/mtgjson-models/booster";
 
 message BoosterConfig {
     repeated booster.BoosterPack boosters = 1;
