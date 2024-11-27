@@ -3,6 +3,7 @@ syntax = "proto3";
 package booster;
 
 import "booster/booster.proto";
+import "booster/booster_sheet.proto";
 
 option go_package = "./mtgjson-models/booster";
 

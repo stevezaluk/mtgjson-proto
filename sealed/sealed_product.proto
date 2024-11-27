@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package sealed;
 
-import "sealed/sealed_product_content.proto";
+import "sealed/sealed_product_contents.proto";
 import "meta/identifiers.proto";
 import "meta/purchase_urls.proto";
 

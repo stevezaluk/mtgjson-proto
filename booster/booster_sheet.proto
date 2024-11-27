@@ -7,7 +7,7 @@ option go_package = "./mtgjson-models/booster";
 message BoosterSheet {
     bool allowDuplicates = 1;
     bool balanceColors = 2;
-    map<string, int> cards = 3;
+    map<string, int64> cards = 3;
     bool foil = 4;
     bool fixed = 5;
     int64 totalWeight = 6;
