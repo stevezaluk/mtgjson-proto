@@ -106,5 +106,5 @@ message CardSet {
     meta.SourceProducts sourceProducts = 80;
     string uuid = 81;
     repeated string variations = 82;
-    repeated string watermakr = 83;
+    repeated string watermark = 83;
 }
