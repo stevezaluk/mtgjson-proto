@@ -10,6 +10,7 @@ import "meta/card_rulings.proto";
 import "meta/leadership.proto";
 import "meta/source_products.proto";
 import "meta/foreign_data.proto";
+import "meta/mtgjson_api.proto";
 
 option go_package = "./mtgjson-models/card";
 
@@ -107,4 +108,5 @@ message CardSet {
     string uuid = 81;
     repeated string variations = 82;
     repeated string watermark = 83;
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 84;
 }

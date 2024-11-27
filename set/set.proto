@@ -5,6 +5,7 @@ package set;
 import "booster/booster_config.proto";
 import "sealed/sealed_product.proto";
 import "meta/translations.proto";
+import "meta/mtgjson_api.proto";
 
 option go_package = "./mtgjson-models/set";
 
@@ -39,4 +40,5 @@ message Set {
     int64 tokenSetSize = 28;
     meta.Translations translations = 29;
     string type = 30;
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 31;
 }
