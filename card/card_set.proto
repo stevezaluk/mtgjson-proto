@@ -29,13 +29,13 @@ message CardSet {
     int64 convertedManaCost = 6;
     string defense = 7;
     int64 edhrecRank = 8;
-    float edhrecSaltiness = 9;
+    double edhrecSaltiness = 9;
     int64 faceConvertedManaCost = 10;
     int64 faceManaValue = 11;
     string faceName = 12;
     string firstPrinting = 13;
 
-    meta.ForeignData foreignData = 14;
+    repeated meta.ForeignData foreignData = 14;
     string hand = 15;
     bool hasAlternativeDeckLimit = 16;
     meta.CardIdentifiers identifiers = 17;
