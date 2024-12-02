@@ -8,13 +8,13 @@ message CardIdentifiers {
     string cardKingdomEtchedId = 1;
     string cardKingdomFoilId = 2;
     string cardKingdomId = 3;
-    string cardSphereId = 4;
-    string cardSphereFoilId = 5;
-    string cardTraderId = 6;
+    string cardsphereId = 4;
+    string cardsphereFoilId = 5;
+    string cardtraderId = 6;
     string csiId = 7;
     string mcmId = 8;
     string mcmMetaId = 9;
-    string miniatureMarketId = 10;
+    string miniaturemarketId = 10;
     string mtgArenaId = 11;
     string mtgjsonFoilVersionId = 12;
     string mtgjsonNonFoilVersionId = 13;
@@ -29,4 +29,5 @@ message CardIdentifiers {
     string scryfallIllustrationId = 22;
     string tcgplayerProductId = 23;
     string tcgplayerEtchedProductId = 24;
+    string tntId = 25;
 }
