@@ -66,15 +66,36 @@ MTGJSON Protobufs is not officially endorsed by MTGJSON
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To be added
-
 ### Prerequisites
 
-To be added
+To be able to generate models for your selected language, you will need the protobuf compiler installed. You can follow the instructions below for installing this
+
+* Debian Based Linux Distribution: `apt-get update && apt install -y protobuf-compiler`
+* MacOS: `brew update && brew install protobuf`
+
+If you need additional tags to be injected into the generated models (specifically for use within Go) then protoc-go-inject-tag should be installed as well
+
+* Install protoc-go-inject-tag: `go install github.com/favadi/protoc-go-inject-tag@latest`
 
 ### Installation
 
-To be added
+Generating protobuf models is incredibly simple and can be completed with a single command. The below example shows how to generate them for Go lang, however they can be generated for any other language that protoc support simply by changing the `--go_out` flag
+to which ever flag best suits your language:
+
+* Generate Protobuf's: `protoc -I=mtgjson-proto/ --go_out=<OUTPUT_DIRECTORY> --go_opt=paths=source_relative mtgjson-proto/*/*.proto`
+
+#### Go-lang Generation Notes
+
+Please be aware that if you are generating these for a go-lang project that is seperate from the MTGJSON-API, then you will need to change the `go_package` option statement that is defined at the top of each protobuf model. Currently, this is set to: `github.com/stevezaluk/mtgjson-models/<package>` to ensure that
+the models will be properly generated for the MTGJSON-API
+
+Additionally, please make note that the `paths=source_relative` option is currently set to ensure that protoc does not recreate the directory structure according to the `go_package` option. Remove this if you would like this functionality
+
+#### Additional Go-lang Struct Tags
+If you are generating these for go, and you need additional struct tags injected into the models then you should run the following command post-generation to inject the tags. You can define the additional tags that you want to inject using the following comment structure: `// @gotags: key=val`.
+Comments injecting additional BSON tags have been provided already:
+
+* Inject Tags: `cd mtgjson-models && protoc-go-inject-tag -input="*/*.pb.go"`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

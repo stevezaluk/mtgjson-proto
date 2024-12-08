@@ -5,6 +5,6 @@ package booster;
 option go_package = "github.com/stevezaluk/mtgjson-models/booster";
 
 message BoosterPack {
-    map<string,  int64> contents = 1;
-    int64 weight = 2;
+    map<string,  int64> contents = 1; // @gotags: bson:"contents"
+    int64 weight = 2; // @gotags: bson:"weight"
 }

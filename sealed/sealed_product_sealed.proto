@@ -5,8 +5,8 @@ package sealed;
 option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProductSealed {
-    int64 count = 1;
-    string name = 2;
-    string set = 3;
-    string uuid = 4;
+    int64 count = 1; // @gotags: bson:"count"
+    string name = 2; // @gotags: bson:"name"
+    string set = 3; // @gotags: bson:"set"
+    string uuid = 4; // @gotags: bson:"uuid"
 }

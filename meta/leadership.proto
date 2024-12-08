@@ -5,7 +5,7 @@ package meta;
 option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
 message LeadershipSkills {
-    bool brawl = 1;
-    bool commander = 2;
-    bool oathbreaker = 3;
+    bool brawl = 1; // @gotags: bson:"brawl"
+    bool commander = 2; // @gotags: bson:"commander"
+    bool oathbreaker = 3; // @gotags: bson:"oathbreaker"
 }

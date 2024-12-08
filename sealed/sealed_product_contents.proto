@@ -12,10 +12,10 @@ import "sealed/sealed_product_sealed.proto";
 option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProductContents {
-    sealed.SealedProductCard card = 1;
-    sealed.SealedProductDeck deck = 2;
-    sealed.SealedProductOther other = 3;
-    sealed.SealedProductPack pack = 4;
-    sealed.SealedProductSealed sealed = 5;
-    map<string, SealedProductContents> variable = 6;
+    sealed.SealedProductCard card = 1; // @gotags: bson:"card"
+    sealed.SealedProductDeck deck = 2; // @gotags: bson:"deck"
+    sealed.SealedProductOther other = 3; // @gotags: bson:"other"
+    sealed.SealedProductPack pack = 4; // @gotags: bson:"pack"
+    sealed.SealedProductSealed sealed = 5; // @gotags: bson:"sealed"
+    map<string, SealedProductContents> variable = 6; // @gotags: bson:"variable"
 }

@@ -9,14 +9,14 @@ import "meta/purchase_urls.proto";
 option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProduct {
-    int64 cardCount = 1;
-    string category = 2;
-    sealed.SealedProductContents contents = 3;
-    meta.CardIdentifiers identifiers = 4;
-    string name = 5;
-    int64 productSize = 6;
-    meta.PurchaseUrls purchaseUrls = 7;
-    string releaseDate = 8;
-    string subtype = 9;
-    string uuid = 10;
+    int64 cardCount = 1; // @gotags: bson:"cardCount"
+    string category = 2; // @gotags: bson:"category"
+    sealed.SealedProductContents contents = 3; // @gotags: bson:"contents"
+    meta.CardIdentifiers identifiers = 4; // @gotags: bson:"identifiers"
+    string name = 5; // @gotags: bson:"name"
+    int64 productSize = 6; // @gotags: bson:"productSize"
+    meta.PurchaseUrls purchaseUrls = 7; // @gotags: bson:"purchaseUrls"
+    string releaseDate = 8; // @gotags: bson:"releaseDate"
+    string subtype = 9; // @gotags: bson:"subtype"
+    string uuid = 10; // @gotags: bson:"uuid"
 }

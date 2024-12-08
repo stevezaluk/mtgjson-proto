@@ -5,6 +5,6 @@ package meta;
 option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
 message RelatedCards {
-    repeated string reverseRelated = 1;
-    repeated string spellbook = 2;
+    repeated string reverseRelated = 1; // @gotags: bson:"reverseRelated"
+    repeated string spellbook = 2; // @gotags: bson:"spellbook"
 }

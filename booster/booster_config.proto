@@ -8,8 +8,8 @@ import "booster/booster_sheet.proto";
 option go_package = "github.com/stevezaluk/mtgjson-models/booster";
 
 message BoosterConfig {
-    repeated booster.BoosterPack boosters = 1;
-    int64 boostersTotalWeight = 2;
-    string name = 3;
-    map<string, booster.BoosterSheet> sheets = 4;
+    repeated booster.BoosterPack boosters = 1; // @gotags: bson:"boosters"
+    int64 boostersTotalWeight = 2; // @gotags: bson:"boostersTotalWeight"
+    string name = 3; // @gotags: bson:"name"
+    map<string, booster.BoosterSheet> sheets = 4; // @gotags: bson:"sheets"
 }

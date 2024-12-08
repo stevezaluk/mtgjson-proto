@@ -17,29 +17,29 @@ both the card ids and for cards themselves. This way we can store just the ID's 
 and fill the contents field before it gets returned to the user
 */
 message Deck {
-    string name = 1;
-    string code = 2;
-    string type = 3;
-    string releaseDate = 4;
-    DeckContentIds contentIds = 5;
-    DeckContents contents = 6;
-    meta.MTGJSONAPIMeta mtgjsonApiMeta = 7;
+    string name = 1; // @gotags: bson:"name"
+    string code = 2; // @gotags: bson:"code"
+    string type = 3; // @gotags: bson:"type"
+    string releaseDate = 4; // @gotags: bson:"releaseDate"
+    DeckContentIds contentIds = 5; // @gotags: bson:"contentIds"
+    DeckContents contents = 6; // @gotags: bson:"contents"
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 7; // @gotags: bson:"mtgjsonApiMeta"
 }
 
 /*
 DeckContentIds - Represents the MTGJSON v4 ID's that make up a deck
 */
 message DeckContentIds {
-    repeated string mainBoard = 1;
-    repeated string sideBoard = 2;
-    repeated string commander = 3;
+    repeated string mainBoard = 1; // @gotags: bson:"mainBoard"
+    repeated string sideBoard = 2; // @gotags: bson:"sideBoard"
+    repeated string commander = 3; // @gotags: bson:"commander"
 }
 
 /* 
 DeckContents - Represents the MTGJSON Cards of the decks and its boards
 */
 message DeckContents {
-    repeated card.CardSet mainBoard = 1;
-    repeated card.CardSet sideBoard = 2;
-    repeated card.CardSet commander = 3;
+    repeated card.CardSet mainBoard = 1; // @gotags: bson:"mainBoard"
+    repeated card.CardSet sideBoard = 2; // @gotags: bson:"sideBoard"
+    repeated card.CardSet commander = 3; // @gotags: bson:"commander"
 }

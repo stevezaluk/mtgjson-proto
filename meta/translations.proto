@@ -5,20 +5,20 @@ package meta;
 option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
 message Translations {
-    string ancientGreek = 1 [json_name="Ancient Greek"];
-    string arabic = 2 [json_name="Arabic"];
-    string chineseSimplified = 3 [json_name="Chinese Simplified"];
-    string chineseTraditional = 4 [json_name="Chinese Traditional"];
-    string french = 5 [json_name="French"];
-    string german = 6 [json_name="German"];
-    string hebrew = 7 [json_name="Hebrew"];
-    string italian = 8 [json_name="Italian"];
-    string japanese = 9 [json_name="Japanese"];
-    string korean = 10 [json_name="Korean"];
-    string latin = 11 [json_name="Latin"];
-    string phyrexian = 12 [json_name="Phyrexian"];
-    string portugeseBrazil = 13 [json_name="Portugese (Brazil)"];
-    string russian = 14 [json_name="Russian"];
-    string sanskrit = 15 [json_name="Sanskrit"];
-    string spanish = 16 [json_name="Spanish"];
+    string ancientGreek = 1 [json_name="Ancient Greek"]; // @gotags: bson:"ancientGreek"
+    string arabic = 2 [json_name="Arabic"]; // @gotags: bson:"arabic"
+    string chineseSimplified = 3 [json_name="Chinese Simplified"]; // @gotags: bson:"chineseSimplified"
+    string chineseTraditional = 4 [json_name="Chinese Traditional"]; // @gotags: bson:"chineseTraditional"
+    string french = 5 [json_name="French"]; // @gotags: bson:"french"
+    string german = 6 [json_name="German"]; // @gotags: bson:"german"
+    string hebrew = 7 [json_name="Hebrew"]; // @gotags: bson:"hebrew"
+    string italian = 8 [json_name="Italian"]; // @gotags: bson:"italian"
+    string japanese = 9 [json_name="Japanese"]; // @gotags: bson:"japanese"
+    string korean = 10 [json_name="Korean"]; // @gotags: bson:"korean"
+    string latin = 11 [json_name="Latin"]; // @gotags: bson:"latin"
+    string phyrexian = 12 [json_name="Phyrexian"]; // @gotags: bson:"phyrexian"
+    string portugeseBrazil = 13 [json_name="Portugese (Brazil)"]; // @gotags: bson:"portugeseBrazil"
+    string russian = 14 [json_name="Russian"]; // @gotags: bson:"russian"
+    string sanskrit = 15 [json_name="Sanskrit"]; // @gotags: bson:"sanskrit"
+    string spanish = 16 [json_name="Spanish"]; // @gotags: bson:"spanish"
 }
