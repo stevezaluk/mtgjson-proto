@@ -8,9 +8,9 @@ option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 MTGJSONAPIMeta - Meta data defined at the top of a MTGJSON structure, used to track ownership
 */
 message MTGJSONAPIMeta {
-    string creationDate = 1;
-    string modifiedDate = 2;
-    string owner = 3;
-    string type = 4;
-    string subtype = 5;
+    string creationDate = 1; // @gotags: bson:"creationDate"
+    string modifiedDate = 2; // @gotags: bson:"modifiedDate"
+    string owner = 3; // @gotags: bson:"owner"
+    string type = 4; // @gotags: bson:"type"
+    string subtype = 5; // @gotags: bson:"subtype"
 }

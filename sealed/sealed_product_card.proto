@@ -5,9 +5,9 @@ package sealed;
 option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProductCard {
-    bool foil = 1;
-    string name = 2;
-    string number = 3;
-    string set = 4;
-    string uuid = 5;
+    bool foil = 1; // @gotags: bson:"foil"
+    string name = 2; // @gotags: bson:"name"
+    string number = 3; // @gotags: bson:"number"
+    string set = 4; // @gotags: bson:"set"
+    string uuid = 5; // @gotags: bson:"uuid"
 }

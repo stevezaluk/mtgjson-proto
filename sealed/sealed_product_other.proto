@@ -5,5 +5,5 @@ package sealed;
 option go_package = "github.com/stevezaluk/mtgjson-models/sealed";
 
 message SealedProductOther {
-    string name = 1;
+    string name = 1; // @gotags: bson:"name"
 }

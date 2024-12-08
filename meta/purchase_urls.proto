@@ -5,10 +5,10 @@ package meta;
 option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
 message PurchaseUrls {
-    string cardKingdom = 1;
-    string cardKingdomEtched = 2;
-    string cardKingdomFoil = 3;
-    string cardmarket = 4;
-    string tcgplayer = 5;
-    string tcgplayerEtched = 6;
+    string cardKingdom = 1; // @gotags: bson:"cardKingdom"
+    string cardKingdomEtched = 2; // @gotags: bson:"cardKingdomEtched"
+    string cardKingdomFoil = 3; // @gotags: bson:"cardKingdomFoil"
+    string cardmarket = 4; // @gotags: bson:"cardmarket"
+    string tcgplayer = 5; // @gotags: bson:"tcgplayer"
+    string tcgplayerEtched = 6; // @gotags: bson:"tcgplayerEtched"
 }

@@ -7,11 +7,11 @@ import "meta/identifiers.proto";
 option go_package = "github.com/stevezaluk/mtgjson-models/meta";
 
 message ForeignData {
-    string faceName = 1;
-    string flavorText = 2;  
-    meta.CardIdentifiers identifiers = 3;
-    string language = 4;
-    string name = 5;
-    string text = 6;
-    string type = 7;
+    string faceName = 1; // @gotags: bson:"faceName"
+    string flavorText = 2; // @gotags: bson:"flavorText"
+    meta.CardIdentifiers identifiers = 3; // @gotags: bson:"identifiers"
+    string language = 4; // @gotags: bson:"language"
+    string name = 5; // @gotags: bson:"name"
+    string text = 6; // @gotags: bson:"text"
+    string type = 7; // @gotags: bson:"type"
 }

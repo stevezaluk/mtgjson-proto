@@ -9,32 +9,32 @@ User - Represents an MTGJSON API user. The fields: decks, cards, and sets are a 
 MTGJSON V4 UUID's that represent the objects that they own
 */
 message User {
-    string username = 1;
-    string email = 2;
-    string auth0Id = 3;
+    string username = 1; // @gotags: bson:"username"
+    string email = 2; // @gotags: bson:"email"
+    string auth0Id = 3; // @gotags: bson:"auth0Id"
 
-    repeated string ownedDecks = 4;
-    repeated string ownedCards = 5;
-    repeated string ownedSets = 6;
+    repeated string ownedDecks = 4; // @gotags: bson:"ownedDecks"
+    repeated string ownedCards = 5; // @gotags: bson:"ownedCards"
+    repeated string ownedSets = 6; // @gotags: bson:"ownedSets"
 
-    UserStatistics stats = 7;
+    UserStatistics stats = 7; // @gotags: bson:"stats"
 }
 
 /*
 UserStatistics - Represents the users MTGJSON API stats and there status for Arcane
 */
 message UserStatistics {
-    int64 level = 1;
-    int64 prestige = 2;
-    int64 xpLeft = 3;
+    int64 level = 1; // @gotags: bson:"level"
+    int64 prestige = 2; // @gotags: bson:"prestige"
+    int64 xpLeft = 3; // @gotags: bson:"xpLeft"
     
-    int64 totalGamesPlayed = 4;
-    int64 totalGamesWon = 5;
-    int64 totalGamesLost = 6;
+    int64 totalGamesPlayed = 4; // @gotags: bson:"totalGamesPlayed"
+    int64 totalGamesWon = 5; // @gotags: bson:"totalGamesWon"
+    int64 totalGamesLost = 6; // @gotags: bson:"totalGamesLost"
     
-    float winLossRatio = 7;
+    float winLossRatio = 7; // @gotags: bson:"winLossRatio"
 
-    int64 totalDecksOwned = 8;
-    int64 totalSetsOwned = 9;
-    int64 totalCardsOwned = 10;
+    int64 totalDecksOwned = 8; // @gotags: bson:"totalDecksOwned"
+    int64 totalSetsOwned = 9; // @gotags: bson:"totalSetsOwned"
+    int64 totalCardsOwned = 10; // @gotags: bson:"totalCardsOwned"
 }

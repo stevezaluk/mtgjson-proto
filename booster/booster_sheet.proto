@@ -5,10 +5,10 @@ package booster;
 option go_package = "github.com/stevezaluk/mtgjson-models/booster";
 
 message BoosterSheet {
-    bool allowDuplicates = 1;
-    bool balanceColors = 2;
-    map<string, int64> cards = 3;
-    bool foil = 4;
-    bool fixed = 5;
-    int64 totalWeight = 6;
+    bool allowDuplicates = 1; // @gotags: bson:"allowDuplicates"
+    bool balanceColors = 2; // @gotags: bson:"balanceColors"
+    map<string, int64> cards = 3; // @gotags: bson:"cards"
+    bool foil = 4; // @gotags: bson:"foil"
+    bool fixed = 5; // @gotags: bson:"fixed"
+    int64 totalWeight = 6; // @gotags: bson:"totalWeight"
 }
