@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/stevezaluk/mtgjson-models/api";
+
+/*
+LoginRequest - Represents a login request to be sent to the /login endpoint
+ */
+message LoginRequest {
+  string email = 1; // @gotags: bson:"email"
+  string password = 2; // @gotags: bson:"password"
+}

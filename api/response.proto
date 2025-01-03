@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/stevezaluk/mtgjson-models/api";
+
+/*
+APIResponse - Represents a generic API response that can get returned from the API.
+Some fields are not used and will be nulled out on response
+ */
+message APIResponse {
+  string message = 1; // @gotags: bson:"message"
+  string err = 2; // @gotags: bson:"err"
+  string requiredScope = 3; // @gotags: bson:"requiredScope"
+  repeated string noExistCards = 4; // @gotags: bson:"noExistCards"
+  repeated string invalidCards = 5; // @gotags: bson:"invalidCards"
+  string deckCode = 6; // @gotags: bson:"deckCode"
+  string setCode = 7; // @gotags: bson:"setCode"
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "github.com/stevezaluk/mtgjson-models/api";
+
+/*
+RegisterRequest - Represents a POST request to be sent to the /register endpoint
+ */
+message RegisterRequest {
+  string email = 1; // @gotags: bson:"email"
+  string username = 2; // @gotags: bson:"username"
+  string password = 3; // @gotags: bson:"password"
+}
