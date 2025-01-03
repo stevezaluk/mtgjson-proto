@@ -16,4 +16,5 @@ message APIResponse {
   repeated string invalidCards = 5; // @gotags: bson:"invalidCards"
   string deckCode = 6; // @gotags: bson:"deckCode"
   string setCode = 7; // @gotags: bson:"setCode"
+  string cardId = 8; // @gotags: bson:"cardId"
 }
