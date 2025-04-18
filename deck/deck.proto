@@ -21,25 +21,19 @@ message Deck {
     string code = 2; // @gotags: bson:"code"
     string type = 3; // @gotags: bson:"type"
     string releaseDate = 4; // @gotags: bson:"releaseDate"
-    DeckContentIds contentIds = 5; // @gotags: bson:"contentIds"
-    DeckContents contents = 6; // @gotags: bson:"contents"
-    meta.MTGJSONAPIMeta mtgjsonApiMeta = 7; // @gotags: bson:"mtgjsonApiMeta"
+    repeated DeckContent commander = 6; // gotags: bson:"commander"
+    repeated DeckContent mainBoard = 7; // @gotags: bson:"mainBoard"
+    repeated DeckContent sideBoard = 8; // @gotags: bson:"sideBoard"
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 9; // @gotags: bson:"mtgjsonApiMeta"
 }
 
 /*
-DeckContentIds - Represents the MTGJSON v4 ID's that make up a deck
-*/
-message DeckContentIds {
-    repeated string mainBoard = 1; // @gotags: bson:"mainBoard"
-    repeated string sideBoard = 2; // @gotags: bson:"sideBoard"
-    repeated string commander = 3; // @gotags: bson:"commander"
-}
-
-/* 
-DeckContents - Represents the MTGJSON Cards of the decks and its boards
-*/
-message DeckContents {
-    repeated card.CardSet mainBoard = 1; // @gotags: bson:"mainBoard"
-    repeated card.CardSet sideBoard = 2; // @gotags: bson:"sideBoard"
-    repeated card.CardSet commander = 3; // @gotags: bson:"commander"
+DeckContent - Represents an Card within the deck. The card field is only populated when it
+is processed by the API and not when it is stored within the database. This is to ensure that there are
+not duplicated card models across the database
+ */
+message DeckContent {
+    int64 quantity = 1; // @gotags: bson:"quantity"
+    string mtgjsonV4Id = 2; // @gotags: bson:"mtgjsonV4Id"
+    repeated card.CardSet card = 3; // @gotags: bson:"card"
 }
