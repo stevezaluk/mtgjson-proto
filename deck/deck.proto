@@ -21,18 +21,25 @@ message Deck {
     string code = 2; // @gotags: bson:"code"
     string type = 3; // @gotags: bson:"type"
     string releaseDate = 4; // @gotags: bson:"releaseDate"
-    repeated DeckContent commander = 6; // gotags: bson:"commander"
-    repeated DeckContent mainBoard = 7; // @gotags: bson:"mainBoard"
-    repeated DeckContent sideBoard = 8; // @gotags: bson:"sideBoard"
-    meta.MTGJSONAPIMeta mtgjsonApiMeta = 9; // @gotags: bson:"mtgjsonApiMeta"
+    DeckContents contents = 5; // @gotags: bson:"contents"
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 6; // @gotags: bson:"mtgjsonApiMeta"
 }
 
 /*
-DeckContent - Represents an Card within the deck. The card field is only populated when it
-is processed by the API and not when it is stored within the database. This is to ensure that there are
-not duplicated card models across the database
+DeckContents - Represents the contents of a deck. Each board is stored here
  */
-message DeckContent {
+message DeckContents {
+    repeated DeckContentEntry commander = 1; // gotags: bson:"commander"
+    repeated DeckContentEntry mainBoard = 2; // @gotags: bson:"mainBoard"
+    repeated DeckContentEntry sideBoard = 3; // @gotags: bson:"sideBoard"
+}
+
+/*
+DeckContentEntry - Represents a single entry within a deck's board. The card field
+is left nil when stored within the database and is filled in during call time. This is
+to ensure there are not duplicated models across the database
+ */
+message DeckContentEntry {
     int64 quantity = 1; // @gotags: bson:"quantity"
     string mtgjsonV4Id = 2; // @gotags: bson:"mtgjsonV4Id"
     repeated card.CardSet card = 3; // @gotags: bson:"card"
