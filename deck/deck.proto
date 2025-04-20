@@ -21,10 +21,17 @@ message Deck {
     string code = 2; // @gotags: bson:"code"
     string type = 3; // @gotags: bson:"type"
     string releaseDate = 4; // @gotags: bson:"releaseDate"
+    DeckContentIds contents = 5;
+    meta.MTGJSONAPIMeta mtgjsonApiMeta = 6; // @gotags: bson:"mtgjsonApiMeta"
+}
+
+/*
+DeckContentIds - Represents the contents of a deck that are stored within Mongo
+ */
+message DeckContentIds {
     map<string, int64> mainBoard = 5; // @gotags: bson:"mainBoard"
     map<string, int64> sideBoard = 6; // @gotags: bson:"sideBoard"
     map<string, int64> commander = 7; // @gotags: bson:"commander"
-    meta.MTGJSONAPIMeta mtgjsonApiMeta = 8; // @gotags: bson:"mtgjsonApiMeta"
 }
 
 /*
