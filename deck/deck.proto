@@ -21,7 +21,7 @@ message Deck {
     string code = 2; // @gotags: bson:"code"
     string type = 3; // @gotags: bson:"type"
     string releaseDate = 4; // @gotags: bson:"releaseDate"
-    DeckContentIds contents = 5;
+    DeckContentIds contents = 5; // @gotags: bson:"contents"
     meta.MTGJSONAPIMeta mtgjsonApiMeta = 6; // @gotags: bson:"mtgjsonApiMeta"
 }
 
